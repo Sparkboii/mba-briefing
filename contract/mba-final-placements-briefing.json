@@ -1,0 +1,89 @@
+{
+  "name": "MBA Final Placements Briefing",
+  "version": 1,
+  "timezone": "Asia/Kolkata",
+  "cadence": "daily at 08:00 IST",
+  "delivery": {
+    "mode": "gmail_html",
+    "email_enabled": true,
+    "recipients": [
+      "pokemonfanspichu@gmail.com",
+      "ipm04sparshyadav@iimrohtak.ac.in",
+      "pgp16tanishac@iimrohtak.ac.in"
+    ],
+    "note": "Send one HTML email to all recipients every morning after the briefing is researched and its state is updated."
+  },
+  "coverage": {
+    "economy_and_markets": [
+      "RBI policy, guidance and liquidity",
+      "inflation, GDP and macroeconomic indicators",
+      "interest rates, FX and capital markets",
+      "sector trends relevant to Indian and global business"
+    ],
+    "companies_and_strategy": [
+      "earnings and outlook",
+      "M&A, investments and restructurings",
+      "leadership changes",
+      "product launches and strategic shifts",
+      "layoffs, hiring and workforce signals"
+    ],
+    "industries": [
+      "consulting",
+      "finance",
+      "FMCG",
+      "technology",
+      "operations and supply chain",
+      "startups"
+    ]
+  },
+  "source_policy": {
+    "prefer": [
+      "official company investor relations, newsroom and filings",
+      "RBI, MOSPI, government and exchange releases",
+      "reputable Indian and international financial/business press"
+    ],
+    "requirements": [
+      "Cite the source URL for every item.",
+      "Deduplicate syndicated coverage into one underlying event.",
+      "Use publication/event dates and avoid stale recaps unless an update is material.",
+      "Do not treat job postings or anonymous reports as confirmed strategy."
+    ]
+  },
+  "brief_format": {
+    "title": "MBA Final Placements Briefing — <date>",
+    "item_fields": [
+      "headline — one or two sentences on what happened",
+      "impact map — implications across strategy, finance/markets, operations/talent and customers, selecting only the affected dimensions",
+      "source link and event/publication date"
+    ],
+    "length": "7–10 high-signal items, grouped by Economy & Markets, Companies & Strategy, and Industries, preceded by a 60-second executive read",
+    "style": "Substantive, factual, India-aware and executive-ready. Use a visually scannable HTML-email layout when delivery is enabled: navy hero banner, short executive-summary block, section headers, rounded item cards, two-column impact maps, readable type scale and inline CSS only. Clearly label interpretation versus reported fact."
+  },
+  "state": {
+    "last_successful_run": "2026-08-28T01:50:24+05:30",
+    "last_cutoff": "2026-08-28T01:50:24+05:30",
+    "source_failures": [
+      {
+        "checked_at": "2026-08-28T01:50:24+05:30",
+        "source": "Reuters direct extraction",
+        "urls": [
+          "https://reuters.com/world/india/indias-central-bank-close-fx-deposit-swap-facility-prematurely-2026-08-14",
+          "https://reuters.com/world/india/india-wanted-red-flags-chip-packets-soda-big-food-fought-back-2026-08-25",
+          "https://reuters.com/world/india/indias-tata-sons-chairman-chandrasekaran-may-step-down-ahead-shareholder-meeting-2026-08-12"
+        ],
+        "reason": "Direct page extraction timed out. Search-result text was available; these URLs should be retried next run."
+      }
+    ],
+    "seen_event_urls": [
+      "https://news.abplive.com/business/rbi-mpc-august-2026-highlights-repo-rate-sanjay-malhotra-gdp-inflation-outlook-live-updates-1860448",
+      "https://reuters.com/world/india/indias-central-bank-close-fx-deposit-swap-facility-prematurely-2026-08-14",
+      "https://procurementmag.com/news/accenture-to-power-daburs-ai-led-digital-transformation",
+      "https://reuters.com/world/india/ai-reshapes-indias-it-services-sector-contracts-clients-demand-more-less-2026-08-20",
+      "https://reuters.com/world/india/india-wanted-red-flags-chip-packets-soda-big-food-fought-back-2026-08-25",
+      "https://www.thehindubusinessline.com/companies/tighter-fssai-fda-checks-spur-1200-crore-opportunity-in-fmcg-fraud-risk-detection-with-ai/article71370086.ece",
+      "https://businessnewsforprofit.com/business/chef-sanjyot-keers-kitchen-brand-curaa-raises-inr-40-crore-in-series-a-led-by-3one4-capital/"
+    ],
+    "last_email_sent": "2026-08-28",
+    "last_email_message_id": "1a046fece4c2ffb0"
+  }
+}
