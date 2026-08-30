@@ -20,10 +20,10 @@ jobs:
       GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.3.0
         with:
           python-version: '3.11'
 
@@ -49,9 +49,9 @@ jobs:
 
       - name: Copy Google API script (needed for Gmail send)
         run: |
-          # We'll copy the actual google_api.py from the skill
-          # For now, create a placeholder - the real one will be installed via hermes skills
-          echo "Placeholder for google_api.py" > "${HERMES_HOME}/skills/productivity/google-workspace/scripts/google_api.py"
+          cp google-workspace/scripts/google_api.py "${HERMES_HOME}/skills/productivity/google-workspace/scripts/"
+          cp google-workspace/scripts/_hermes_home.py "${HERMES_HOME}/skills/productivity/google-workspace/scripts/"
+          cp google-workspace/scripts/setup.py "${HERMES_HOME}/skills/productivity/google-workspace/scripts/"
 
       - name: Run research
         id: research
@@ -60,14 +60,14 @@ jobs:
           python scripts/research_briefing.py
 
       - name: Upload briefing HTML as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.4.0
         with:
           name: mba-briefing-html
           path: ${{ env.HERMES_HOME }}/placement-news/latest-mba-briefing.html
           retention-days: 2
 
       - name: Upload updated contract
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.4.0
         with:
           name: mba-contract
           path: ${{ env.HERMES_HOME }}/placement-news/mba-final-placements-briefing.json
@@ -84,22 +84,22 @@ jobs:
       GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Download briefing HTML
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.4.0
         with:
           name: mba-briefing-html
           path: ${{ env.HERMES_HOME }}/placement-news/
 
       - name: Download updated contract
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.4.0
         with:
           name: mba-contract
           path: ${{ env.HERMES_HOME }}/placement-news/
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.3.0
         with:
           python-version: '3.11'
 
@@ -114,7 +114,9 @@ jobs:
 
       - name: Copy Google API script
         run: |
-          echo "Placeholder for google_api.py" > "${HERMES_HOME}/skills/productivity/google-workspace/scripts/google_api.py"
+          cp google-workspace/scripts/google_api.py "${HERMES_HOME}/skills/productivity/google-workspace/scripts/"
+          cp google-workspace/scripts/_hermes_home.py "${HERMES_HOME}/skills/productivity/google-workspace/scripts/"
+          cp google-workspace/scripts/setup.py "${HERMES_HOME}/skills/productivity/google-workspace/scripts/"
 
       - name: Send email
         run: |
@@ -122,7 +124,7 @@ jobs:
           python scripts/send_briefing.py
 
       - name: Upload final contract state
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.4.0
         with:
           name: mba-contract-final
           path: ${{ env.HERMES_HOME }}/placement-news/mba-final-placements-briefing.json
