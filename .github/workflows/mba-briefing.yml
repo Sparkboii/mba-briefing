@@ -4,21 +4,20 @@ on:
   schedule:
     # Runs daily at 02:30 UTC = 08:00 IST
     - cron: '30 2 * * *'
-  workflow_dispatch: {}  # Allow manual trigger
+  workflow_dispatch: {}
 
 permissions:
   contents: read
-
-env:
-  HERMES_HOME: ${{ runner.temp }}/hermes-home
-  GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
-  GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
 
 jobs:
   research:
     name: Research & Render Briefing
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      HERMES_HOME: ${{ runner.temp }}/hermes-home
+      GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+      GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -79,6 +78,10 @@ jobs:
     needs: research
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      HERMES_HOME: ${{ runner.temp }}/hermes-home
+      GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+      GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
