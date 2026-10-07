@@ -20,12 +20,12 @@ Add these in your repository settings → **Settings → Secrets and variables �
 ```json
 {
   "installed": {
-    "client_id": "160334641879-mcg1ndurutppdjt44ld338ecnf9pl1et.apps.googleusercontent.com",
+    "client_id": "Enter your id",
     "project_id": "serious-case-459315-i4",
     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
     "token_uri": "https://oauth2.googleapis.com/token",
     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_secret": "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",
+    "client_secret": "Enter your secret",
     "redirect_uris": ["http://localhost"]
   }
 }
