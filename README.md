@@ -38,10 +38,7 @@ Add these in your repository settings → **Settings → Secrets and variables �
 
 ## Recipients
 
-The daily email goes to:
-- `pokemonfanspichu@gmail.com`
-- `ipm04sparshyadav@iimrohtak.ac.in`
-- `pgp16tanishac@iimrohtak.ac.in`
+The daily email goes to the email ids that have been entered as recipients.
 
 To change recipients, edit `contract/mba-final-placements-briefing.json` and push.
 
