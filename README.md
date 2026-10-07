@@ -107,6 +107,4 @@ HERMES_HOME=/path/to/hermes-home python scripts/send_briefing.py --dry-run
 | "Research timeout" | Check Actions logs; may need to increase `timeout-minutes` |
 | "No new items found" | Normal if no material news; contract `last_cutoff` still advances |
 
-## Credits
 
-Built with [Hermes Agent](https://hermes-agent.nousresearch.com) and the `competitor-news-monitor` skill.
