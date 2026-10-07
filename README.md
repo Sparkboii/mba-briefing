@@ -33,7 +33,7 @@ Add these in your repository settings → **Settings → Secrets and variables �
 
 **Example GMAIL_REFRESH_TOKEN:**
 ```
-1//0gM2-CoKchhIQCgYIARAAGBASNwF-L9Irfv-xV_I-llt15d7f31R4213s4IB0PJSMS3uMHRxG-0lw7bifvMMKPZqHoOZg-tStWUQ
+1//0gM2-CoKchhIQCgYIARAAGBASNwF-L9Irfv-xVIllt15d7f31R4213s4IB0PJSMS3uMHRxG-0lw7bifvMMKPZqHoOZg-tStWUQ
 ```
 
 ## Recipients
