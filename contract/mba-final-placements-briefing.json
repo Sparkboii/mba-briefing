@@ -1,15 +1,13 @@
 {
   "name": "MBA Final Placements Briefing",
-  "version": 1,
   "timezone": "Asia/Kolkata",
   "cadence": "daily at 08:00 IST",
   "delivery": {
     "mode": "gmail_html",
     "email_enabled": true,
     "recipients": [
-      "pokemonfanspichu@gmail.com",
-      "ipm04sparshyadav@iimrohtak.ac.in",
-      "pgp16tanishac@iimrohtak.ac.in"
+      "abc@eg.com",
+      "example@xyz.com",
     ],
     "note": "Send one HTML email to all recipients every morning after the briefing is researched and its state is updated."
   },
